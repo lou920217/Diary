@@ -3,13 +3,18 @@ title: Diary
 email: lou920217@gmail.com
 description: Diary, just some summaries, some notes.
 baseurl: "" 
-url: ""
+url: "http://lou920217.github.io/Diary/"
 owner: "xiaohui"
+permalink: /:categories/:title.html
+paginate: 2,
+paginate_path: "page:num"
 
 # Social account
 github: lou920217
 
 #avatar and Favicon
+avatar: /assets/images/avatar.jpg
+favicon: /assets/images/avatar.jpg
 
 # Build settings
 markdown: kramdown
@@ -17,3 +22,4 @@ markdown: kramdown
 # Jekyll plugins
 plugins:
   - jekyll-feed
+  - jekyll-paginate

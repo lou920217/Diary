@@ -1,8 +1,22 @@
 ---
 layout: layout
 ---
-<div class="content content-style">
-    <h1 class="title">{{page.title}}</h1>
-    <p><time>10 Nov 2016 By {{site.owner}}</time><i class="tag">JavaScript</i><i class="tag">Html</i><i class="tag">Css</i></p>
-    {{content}}
+<div class="about-page">
+    <div class='side-bar'>
+        <div class='user'>
+            <img class="user-pic" src="{{site.avatar}}" />
+            <div class='user-name'>{{site.owner}}</div>
+        </div>
+        <div class='tags'>
+            {% for tag in page.tags %}
+                <i class='tag {{tag | downcase }}'>{{tag}}</i>
+            {% endfor %}
+        </div>
+        <div class="introduction">
+            {{page.introduction}}
+        </div>
+    </div>
+    <div class="content">
+        {{content}}
+    </div>
 </div>

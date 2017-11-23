@@ -3,62 +3,44 @@ layout: layout
 ---
 <div class="content">
     <ul class="post-list">
+        {% for post in site.posts %}
         <li>
-            <time>10 Nov 2016</time><a href="">使用不同的方法来创建对象和生成原型链</a>
+            <time>{{post.date | date_to_string}}</time><a href="{{post.url}}">{{post.title}}</a>
+            {% for tag in post.tags %}
+            <i class="tag">{{tag}}</i>
+            {% endfor %}
         </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">javaScript的几种继承方式</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">new 实例化</a><i class="tag">CSS</i><i class="tag">HTML</i>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">严格模式规定不能使用未定义的变量。严格模式是对ECMAScript 5 的严格限制，以求得更高效的性能和更便利的调试。</a><i class="tag">JavaScript</i>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">javaScript的几种继承方式</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">new 实例化</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">原型链的理解</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">javaScript的几种继承方式</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">new 实例化</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">使用不同的方法来创建对象和生成原型链</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">javaScript的几种继承方式</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">new 实例化</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">严格模式规定不能使用未定义的变量。</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">javaScript的几种继承方式</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">new 实例化</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">原型链的理解</a>
-        </li>
-        <li>
-            <time>10 Nov 2016</time><a href="">原型链的理解</a>
-        </li>
+        {% endfor %}
     </ul>
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+      {% else %}
+        <span>&laquo; Prev</span>
+      {% endif %}
+    
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <em>{{ page }}</em>
+        {% elsif page == 1 %}
+          <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+    
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+      {% else %}
+        <span>Next &raquo;</span>
+      {% endif %}
+    </div>
+    {% endif %}
     <div class="pages">
         <!-- <a href="">«</a> -->
         <a href="">1</a>
-        <a class="active" href="">2</a>
+        <a class="active" href="">{{paginator.page}}</a>
         <a href="">3</a>
         <!-- <a href="">»</a> -->
     </div>
