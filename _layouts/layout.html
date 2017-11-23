@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.10.0/styles/monokai.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            $('pre code').each(function(i, block) {
+                console.log(block);
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+    <title>{{page.title}}</title>
+</head>
+<body>
+    <div class="layout">
+        <!-- <div class="header">
+            <div class="nav">
+                <a target="_blank" href="http://baidu.com">Home</a>
+                <a target="_blank" href="http://baidu.com">About</a>
+            </div>
+        </div> -->
+        {{content}}
+        <div class="footer">
+            <p>Copyright © 2017 <a href="http://baidu.com">lou920217</a></p>
+        </div>
+    </div>
+</body>
+</html>

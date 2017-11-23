@@ -1,0 +1,19 @@
+# Site settings
+title: Diary
+email: lou920217@gmail.com
+description: Diary, just some summaries, some notes.
+baseurl: "" 
+url: ""
+owner: "xiaohui"
+
+# Social account
+github: lou920217
+
+#avatar and Favicon
+
+# Build settings
+markdown: kramdown
+
+# Jekyll plugins
+plugins:
+  - jekyll-feed
