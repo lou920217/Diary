@@ -4,10 +4,11 @@ layout: layout
 <div class="about-page">
     <div class='side-bar'>
         <div class='user'>
+            {{site.baseurl}}
             {% if site.evn == 'development' %} 
             <img class="user-pic" src="{{site.avatar}}" />
             {% else %}
-            <img class="user-pic" src="{{site.path | prepend: site.baseurl | replace: '//', '/' }}{{site.avatar}}" />
+            <img class="user-pic" src="{{site.path}}{{site.avatar}}" />
             {% endif %}
             <div class='user-name'>{{site.owner}}</div>
         </div>
