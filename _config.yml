@@ -3,11 +3,15 @@ title: Diary
 email: lou920217@gmail.com
 description: Diary, just some summaries, some notes.
 baseurl: "/" 
-url: "http://lou920217.github.io/Diary"
+url: "http://lou920217.github.io"
 owner: "xiaohui"
-permalink: /:categories/:title.html
-paginate: 2,
-paginate_path: "page:num"
+permalink: /Diary/:categories/:title.html
+paginate: 10,
+paginate_path: "/Diary/page:num"
+
+# deploy path
+path: /Diary/
+evn: 'production'
 
 # Social account
 github: lou920217
