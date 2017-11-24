@@ -31,7 +31,7 @@ i{
     font-style: normal;
 }
 h1, h2, h3, h4, h5, h6{
-    font-size: 100%;
+    /* font-size: 100%; */
     margin: 1em 0;
 }
 .layout{
@@ -127,15 +127,32 @@ i.tag{
 }
 
 .content-style .title{
-    font-size: 16px;
+    font-size: 1.5em;
 }
 p{
     margin: 1em 0;
 }
 
 .content-style{
+    line-height: 1.5;
     letter-spacing: 1px;
     word-wrap: break-word;
+}
+.content-style a{
+    color: #337ab7;
+}
+.content-style ul, .content-style ol{
+    margin-left: 2em;
+}
+.content-style blockquote{
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+    color: #999;
+    font-style: italic;
+}
+.content-style img{
+    max-width: 100%;
 }
 
 .about-page{
