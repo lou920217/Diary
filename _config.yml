@@ -9,10 +9,6 @@ permalink: /:categories/:title.html
 paginate: 10,
 paginate_path: "page:num"
 
-# deploy path
-path: /Diary
-evn: 'production'
-
 # Social account
 github: lou920217
 
