@@ -18,7 +18,7 @@ github: lou920217
 
 #avatar and Favicon
 avatar: /assets/images/avatar.jpg
-favicon: /assets/images/avatar.jpg
+favicon: /assets/images/favicon.ico
 
 # Build settings
 markdown: kramdown

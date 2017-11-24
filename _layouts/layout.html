@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% if site.evn == 'development' %} 
     <link rel="stylesheet" href="/assets/css/main.css">
     {% else %}
     <link rel="stylesheet" href="{{site.path}}/assets/css/main.css">
+    {% endif %}
+    {% if site.evn == 'development' %} 
+    <link rel="shortcut icon" href="{{site.favicon}}" type="image/x-icon">
+    {% else %}
+    <link rel="shortcut icon" href="{{site.path}}{{site.favicon}}" type="image/x-icon">
     {% endif %}
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.10.0/styles/monokai.css">
@@ -24,7 +29,7 @@
 <body>
     <div class="layout">
         {{content}}
-        
+
         {% include footer.html %}
     </div>
 </body>
