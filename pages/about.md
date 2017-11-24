@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About me
-permalink:  /Diary/about/
+permalink:  /about/
 tags: ['技术宅', '幻想狂', '玻璃心']
 introduction: 技术宅？幻想狂？玻璃心？鬼知道我想说什么... 
 ---

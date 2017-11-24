@@ -5,12 +5,12 @@ description: Diary, just some summaries, some notes.
 baseurl: "/" 
 url: "http://lou920217.github.io"
 owner: "xiaohui"
-permalink: /Diary/:categories/:title.html
+permalink: /:categories/:title.html
 paginate: 10,
-paginate_path: "/Diary/page:num"
+paginate_path: "page:num"
 
 # deploy path
-path: /Diary/
+path: /Diary
 evn: 'production'
 
 # Social account
