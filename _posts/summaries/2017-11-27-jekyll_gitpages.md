@@ -53,4 +53,48 @@ Jekyll官网的简介已经很全面了，在此就不在赘述。
 
     进入仓库，选择setting来进行Github Pages的配置，附图一张：
 
-    [![setting](/assets/images/Jekyll_blog/setting.png '配置Github Pages')](/assets/images/Jekyll_blog/setting.png)
+    [![setting]({{ '/assets/images/Jekyll_blog/setting.png' | prepend: site.baseurl | replace: '//', '/' }} '配置Github Pages')]({{ '/assets/images/Jekyll_blog/setting.png' | prepend: site.baseurl | replace: '//', '/' }} '_blank')
+
+    然后仓库版本设置为master，再附图一张：
+
+    [![setting]({{ '/assets/images/Jekyll_blog/set_version.png' | prepend: site.baseurl | replace: '//', '/' }} '配置Github Pages')]({{ '/assets/images/Jekyll_blog/set_version.png' | prepend: site.baseurl | replace: '//', '/' }} '_blank')
+
+    现在就一切ok，开始下一步骤：安装Jekyll本地服务。
+
+## [#](#section2) <span id="section2">安装Jekyll本地开发环境</span>
+
+1. Jekyll是基于Ruby的开发的，所以要先安装Ruby。[Ruby下载传送门](http://www.ruby-lang.org/en/downloads/)，Ruby下载成功后，按照安装引导程序一步步的选择，安装成功后，用下面的命令行检测有没有安装成功：
+<br>
+<br>
+```
+    ruby -v
+    # 成功后会显示: 安装成功的ruby版本等信息
+```
+2. 用gem安装Jekyll
+<br>
+<br>
+```
+    gem install jekyll
+```
+
+3. 新建项目目录，进入目录用以下命令创建站点,并运行启动站点：
+<br>
+<br>
+```
+    cd myblog
+    jekyll new myblog
+    jekyll server
+```
+jekyll默认服务端口为4000，然后打开浏览器访问127.0.0.1:4000，自动进入默认页面，站点创建成功。
+
+## [#](#section3) <span id="section3">Jekyll进阶</span>
+
+进阶神马的，你们自己看Jekyll文档吧...23333333
+
+## [#](#section4) <span id="section4">git基本用法，部署</span>
+
+以后补充.....
+
+## [#](#section5) <span id="section5">总结</span>
+
+补充.....
