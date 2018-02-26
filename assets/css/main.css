@@ -154,6 +154,14 @@ p{
 .content-style img{
     max-width: 100%;
 }
+.content-style table{
+    /* width: 100%; */
+    border-collapse: collapse;
+}
+.content-style table th, .content-style table td{
+    border: 1px solid  #bbb;
+    padding: 4px 10px;
+}
 
 .about-page{
     display: flex;

@@ -2,7 +2,7 @@
 title: Diary
 email: lou920217@gmail.com
 description: Diary, just some summaries, some notes.
-baseurl: "/" 
+baseurl: "" 
 url: "http://lou920217.github.io"
 owner: "xiaohui"
 permalink: /:categories/:title.html
