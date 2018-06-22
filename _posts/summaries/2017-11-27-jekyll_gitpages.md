@@ -23,13 +23,13 @@ tags: [Jekyll, Git]
 
 ### [#]() Jekyll
 
-下面是引用[Jekyll](http://jekyll.com.cn/)的介绍:
+下面是引用[Jekyll](http://jekyll.com.cn/?_blank)的介绍:
 
 > 将纯文本转化为静态网站和博客
 >
 > 简单 无需数据库、评论功能，不需要不断的更新版本——只用关心你的博客内容。
 >
-> 静态 只用 [Markdown](http://daringfireball.net/projects/markdown/) (或 [Textile](http://textile.sitemonks.com/))、[Liquid](http://wiki.shopify.com/Liquid)、HTML & CSS 就可以构建可部署的静态网站。
+> 静态 只用 [Markdown](http://daringfireball.net/projects/markdown/?_blank) (或 [Textile](http://textile.sitemonks.com/?_blank))、[Liquid](http://wiki.shopify.com/Liquid?_blank)、HTML & CSS 就可以构建可部署的静态网站。
 >
 > 博客形态 自定义地址、分类、页面、博客内容 以及 自定义的布局设计 都是系统中的一等公民。
 
@@ -37,13 +37,13 @@ Jekyll官网的简介已经很全面了，在此就不在赘述。
 
 ### [#]() Github Pages
 
-附上[Github Pages介绍跟快速开始的指南](https://pages.github.com/)(偷懒是不对的...)
+附上[Github Pages介绍跟快速开始的指南](https://pages.github.com/?_blank)(偷懒是不对的...)
 
 我们可以创建三种不同类型的Github Pages，分别是account，project，organization。本博客用的是project类型的Github Pages，虽说有三种类型，但是创建过程大同小异，这里重点介绍project的创建。
 
 1. 注册Github
 
-    到[Github](https://github.com/)注册账号。这步就不用介绍了吧...
+    到[Github](https://github.com/?_blank)注册账号。这步就不用介绍了吧...
 
 2. 创建一个新的仓库(repository)
 
@@ -53,17 +53,17 @@ Jekyll官网的简介已经很全面了，在此就不在赘述。
 
     进入仓库，选择setting来进行Github Pages的配置，附图一张：
 
-    [![setting]({{ '/assets/images/Jekyll_blog/setting.png' | prepend: site.baseurl | replace: '//', '/' }} '配置Github Pages')]({{ '/assets/images/Jekyll_blog/setting.png' | prepend: site.baseurl | replace: '//', '/' }} '_blank')
+    [![setting]({{ '/assets/images/Jekyll_blog/setting.png' | prepend: site.baseurl | replace: '//', '/' }} '配置Github Pages')]({{ '/assets/images/Jekyll_blog/setting.png?_blank' | prepend: site.baseurl | replace: '//', '/' }})
 
     然后仓库版本设置为master，再附图一张：
 
-    [![setting]({{ '/assets/images/Jekyll_blog/set_version.png' | prepend: site.baseurl | replace: '//', '/' }} '配置Github Pages')]({{ '/assets/images/Jekyll_blog/set_version.png' | prepend: site.baseurl | replace: '//', '/' }} '_blank')
+    [![setting]({{ '/assets/images/Jekyll_blog/set_version.png' | prepend: site.baseurl | replace: '//', '/' }} '配置Github Pages')]({{ '/assets/images/Jekyll_blog/set_version.png?_blank' | prepend: site.baseurl | replace: '//', '/' }})
 
     现在就一切ok，开始下一步骤：安装Jekyll本地服务。
 
 ## [#](#section2) <span id="section2">安装Jekyll本地开发环境</span>
 
-1. Jekyll是基于Ruby的开发的，所以要先安装Ruby。[Ruby下载传送门](http://www.ruby-lang.org/en/downloads/)，Ruby下载成功后，按照安装引导程序一步步的选择，安装成功后，用下面的命令行检测有没有安装成功：
+1. Jekyll是基于Ruby的开发的，所以要先安装Ruby。[Ruby下载传送门](http://www.ruby-lang.org/en/downloads/?_blank)，Ruby下载成功后，按照安装引导程序一步步的选择，安装成功后，用下面的命令行检测有没有安装成功：
 <br>
 <br>
 ```
