@@ -144,6 +144,15 @@ p{
 .content-style ul, .content-style ol{
     margin-left: 2em;
 }
+.content-style li{
+    margin: 1em 0;
+}
+.content-style  code.highlighter-rouge{
+    overflow-x: auto;
+    padding: 0.2em .3em;
+    background: #ddd;
+    color: #222;
+}
 .content-style blockquote{
     padding: 10px 20px;
     margin: 0 0 20px;
