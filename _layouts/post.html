@@ -12,4 +12,14 @@ layout: layout
     {{content}}
 
     {% include related.html %}
+
+    <div class="tool">
+        <a href="{{ site.baseurl }}/">返回<br>首页</a>
+        <a onclick="toTop()" href="javascript: void(0);">返回<br>顶部</a>
+    </div>
+    <script>
+        function toTop(){
+            scrollTo(0, 0);
+        }
+    </script>
 </div>

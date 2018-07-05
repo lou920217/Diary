@@ -36,3 +36,52 @@ tags: [git]
     ```
     git commit -m info    // @info 提交信息
     ```
+    运行该命令会将修改过并已经添加到暂存区的文件提交到本地的Git仓库。
+6. 添加远程仓库
+
+    ```
+    git remote add name url  // @name 远程仓库的简写名称  @url 远程仓库的地址，可以是http或者ssh协议的地址 
+    ```
+    给本地项目添加一个远程仓库。
+7. 查看远程仓库
+
+    ```
+    git remote -v
+    ```
+    返回远程仓库的简写和fetch，push地址
+8. 修改远程仓库地址
+
+    ```
+    git remote set-url name newurl oldurl  // @name 远程仓库的简写名称  @newurl 远程仓库的旧地址  @oldurl  远程仓库的新地址 
+    ```
+9. 拉取远程仓库
+
+    ```
+    git pull name branch  //  @name 远程仓库的简写名称   @branch  远程仓库的需要拉取的分支
+    ```
+    `git pull` 命令会拉取数据并自动尝试合并到当前所在的分支
+10. 推送到远程仓库
+
+    ```
+    git push remote-name branch-name  // @remote-name 远程仓库的简写名称  @branch-name 分支名称
+    ```
+11. 查看所有分支
+
+    ```
+    git branch
+    ```
+12. 新建分支
+
+    ```
+    git branch branch-name   //  @branch-name  分支名称
+    ```
+13. 切换分支
+
+    ```
+    git checkour branch-name   // @branch-name 分支名称
+    ```
+14. 查看所有提交
+
+    ```
+    git log
+    ```
