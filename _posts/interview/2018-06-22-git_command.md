@@ -43,6 +43,7 @@ tags: [git]
     git remote add name url  // @name 远程仓库的简写名称  @url 远程仓库的地址，可以是http或者ssh协议的地址 
     ```
     给本地项目添加一个远程仓库。
+    
 7. 查看远程仓库
 
     ```
@@ -78,7 +79,7 @@ tags: [git]
 13. 切换分支
 
     ```
-    git checkour branch-name   // @branch-name 分支名称
+    git checkout branch-name   // @branch-name 分支名称
     ```
 14. 查看所有提交
 

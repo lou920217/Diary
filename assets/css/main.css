@@ -160,11 +160,14 @@ p{
     color: #999;
     font-style: italic;
 }
+.content-style hr{
+    margin: 2em 0;
+}
 .content-style img{
     max-width: 100%;
 }
 .content-style table{
-    /* width: 100%; */
+    width: 100%;
     border-collapse: collapse;
 }
 .content-style table th, .content-style table td{
