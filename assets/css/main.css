@@ -269,7 +269,6 @@ p{
     bottom: 50px;
     display: flex;
     flex-direction: column;
-    
 }
 .tool a{
     flex: 1;
@@ -278,4 +277,8 @@ p{
     margin-bottom: 4px;
     padding: 6px 12px;
     background-color: #fff;
+}
+.tool a:hover{
+    color: #fff;
+    background-color: #02b68c;
 }

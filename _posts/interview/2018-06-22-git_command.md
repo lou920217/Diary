@@ -53,8 +53,9 @@ tags: [git]
 8. 修改远程仓库地址
 
     ```
-    git remote set-url name newurl oldurl  // @name 远程仓库的简写名称  @newurl 远程仓库的旧地址  @oldurl  远程仓库的新地址 
+    git remote set-url name newurl oldurl 
     ```
+    `@name` 远程仓库的简写名称  `@newurl` 远程仓库的旧地址  `@oldurl` 远程仓库的新地址
 9. 拉取远程仓库
 
     ```
@@ -66,7 +67,7 @@ tags: [git]
     ```
     git push remote-name branch-name  // @remote-name 远程仓库的简写名称  @branch-name 分支名称
     ```
-11. 查看所有分支
+11. 查看当前分支
 
     ```
     git branch
@@ -79,10 +80,77 @@ tags: [git]
 13. 切换分支
 
     ```
-    git checkout branch-name   // @branch-name 分支名称
+    git checkout -b branch-name   // @branch-name 分支名称   `-b`参数表示创建并切换
     ```
-14. 查看所有提交
+15. 合并分支
+    
+    ```
+    git merge branch-name   // @branch-name 分支名称  表示将branch-name合并到当前分支
+    ```
+16. 删除分支
+    
+    ```
+    git branch -d branch-name // @branch-name 分支名称  
+    ```
+17. 版本回退
+    
+    ```
+    git reset --soft/--hard/--mixed(default) hash/HEAD/HEAD^   
+    ```
+    `@hash` 表示版本号，是有SHA1计算出来的一个非常大的数字，用十六进制表示，定位版本号只需前六位即可;   
+
+    `@HEAD` 表示当前版本;  
+
+    `@HEAD^` 表示上一个版本，以此类推，往上100个版本就用`HEAD~100`;    
+
+    `--soft/--hard/--mixed` 参数表示三个回复等级，`--soft` 仅仅是将HEAD指针改变，已经add的缓存以及工作区的所有东西都不变；`--mixed` 则是将HEAD指针改变，已经add到暂存区的缓存也会丢失掉，但是工作区的东西却不会改变；`--hard` 则一切都会恢复，所有东西都会恢复到指定的版本状态。
+18. 查看命令历史记录
+    
+    ```
+    git reflog  // 查看命令历史记录
+    ```
+19. 查看提交历史记录
 
     ```
     git log
     ```
+20. 查看版本改动，文件对比
+    
+    ```
+    git diff
+    ```
+    不加参数即默认比较工作区与暂存区
+    ```
+    git diff --cached/HEAD/commit-id [<path>]
+    ```
+    `--cached` 比较暂存区与最新本地版本库
+
+    `HEAD` 比较工作区与最新本地版本库
+
+    `commit-id` 比较工作区与指定commit-id
+    ```
+    git diff --cached [<commit-id>] [<path>]
+    ```
+    比较暂存区与指定commit-id
+    ```
+    git diff [<commit-id>] [<commit-id>] [<path>]
+    ```
+    比较两个commit-id
+    ```
+    git diff --cached/--HEAD/[<path>] > patch 
+    ```
+    patch的命名是随意的，不加其他参数时作用是当我们希望将我们本仓库工作区的修改拷贝一份到其他机器上使用，但是修改的文件比较多，拷贝量比较大，此时我们可以将修改的代码做成补丁，之后在其他机器上对应目录下使用 `git apply patch` 将补丁打上即可
+
+    `--cached` 暂存区与版本库的差异做成补丁
+
+    `--HEAD` 工作区与版本库的差异做成补丁
+
+    `[<path>] `将单个文件做成一个单独的补丁
+
+    `git apply patch` 应用补丁
+
+    `git apply --check patch` 检测补丁是否可用，没有输出表示可用
+
+    `git apply --reject patch` 根据一定的融合策略融合补丁，有冲突则生成冲突文件
+
+**附录：** [Git文档传送门](https://git-scm.com/book/zh/v2)
