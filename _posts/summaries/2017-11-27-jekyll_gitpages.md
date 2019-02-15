@@ -9,7 +9,7 @@ tags: [Jekyll, Git]
 闲话不说，进入正题：
 
 ## [#](#section) <span id="section">目录</span>
-1. [Jekyll和Github Pages的介绍](#section1)
+1. [Jekyll和Github Pages的介绍](#section1) 
 2. [安装Jekyll本地开发环境](#section2)
 3. [Jekyll进阶](#section3)
     1. [结构目录](#section3.1)
@@ -22,7 +22,7 @@ tags: [Jekyll, Git]
   
 ## [#](#section1) <span id="section1">Jekyll和Github Pages的介绍</span>
 
-### [#]() Jekyll
+### [#](#-jekyll) Jekyll
 
 下面是引用[Jekyll](http://jekyll.com.cn/?_blank)的介绍:
 
@@ -36,7 +36,7 @@ tags: [Jekyll, Git]
 
 Jekyll官网的简介已经很全面了，在此就不在赘述。
 
-### [#]() Github Pages
+### [#](#-github-pages) Github Pages
 
 附上[Github Pages介绍跟快速开始的指南](https://pages.github.com/?_blank)(偷懒是不对的...)
 
