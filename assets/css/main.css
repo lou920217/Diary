@@ -159,9 +159,10 @@ p{
 .content-style blockquote{
     padding: 10px 20px;
     margin: 0 0 20px;
-    border-left: 5px solid #eee;
+    border-left: 6px solid #ddd;
     color: #999;
-    font-style: italic;
+    background-color: #fcfcfc;
+    /* font-style: italic; */
 }
 .content-style hr{
     margin: 2em 0;
