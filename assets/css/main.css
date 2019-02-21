@@ -254,10 +254,13 @@ p{
         display: none;
     }
     .layout{
-        width: 90%;
+        width: 96%;
     }
     .about-page{
         display: block;
+    }
+    .content-style{
+        padding: 14px;
     }
     .side-bar{
         width: 100%;
