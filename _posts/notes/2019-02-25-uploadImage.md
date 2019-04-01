@@ -81,6 +81,44 @@ h5上传图片已经不是什么很新鲜的功能了，下面就根据我在开
 
 ### 二、上传数据格式以及编码转换
 
+之所以要写这篇文章，除了上面写的记录问题之外，主要还是对 `Base64` 、`UTF-8` 、`UTF-16` 、`Unicode` 、`ASCII` 等编码，`ArrayBuffer` 、`TypedArray` 、`File` 、`Blob` 、`FormData` 、`FileReader` 等对象，以及一些对象的方法不太熟悉的原因，在此学习下。
+
+为了更有效的学习这些知识点，咱们根据实际的代码来学习：
+
+1. 由图片链接来获取图片资源，并生成转换为 Base64 编码数据。
+   
+   ```
+    function getImage(url){
+        return new Promise(function(resolve, reject){
+            var img = new Image();
+			img.onload = function(){
+				var canvas = document.createElement("canvas");
+				canvas.width = this.width;
+				canvas.height = this.height;
+				var ctx = canvas.getContext("2d");
+				ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+				var dataURL = canvas.toDataURL();
+				resolve(dataURL);
+			};
+			img.onerror = function(e){
+				reject(e);
+			};
+            img.src = url;
+			img.crossOrigin = "Anonymous";  // 图片链接的跨域
+        });
+    }
+
+    getImage('http://example.com/1.png')
+    .then(data => {
+        console.log(data);  // 图片资源的 base64 编码的Data URL 数据
+    })
+    .catch(err => {
+        ...
+    })
+   ```
+    图片链接的跨域，动图的数据获取，图片资源的类型获取， Canvas 的 toDataURL 等知识点
+
+2. 由 Base64 编码数据，ArrayBuffer 二进制数据类型，File，Blob 四种格式数据之间的转换。
 
 ### 三、上传图片的预览图处理方式
 
