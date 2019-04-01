@@ -61,7 +61,7 @@ tags: [http, ajax, javascript]
 
 #### 一、 浏览器的表单提交
 
-一个form表单可以用以下4中方式发送:
+一个form表单可以用以下4种方式发送:
 
 1. 使用 `POST` 方法，`encType` 设置为 `application/x-www-form-urlencoded` (默认，对特殊字符编码)
 2. 使用 `POST` 方法，`encType` 设置为 `multipart/form-data` (用于文件上传，不对特殊字符编码)
