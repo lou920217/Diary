@@ -16,4 +16,5 @@ tags: [npm, git, module]
    
 2. 通过git+仓库地址来获取库包
 3. verdaccio 搭建私有的库包服务器
+   
    verdaccio 是forked于sinopia@1.4.0并且100%向后兼容。
